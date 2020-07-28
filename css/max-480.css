@@ -1,469 +1,462 @@
 @media screen and (max-width: 480px) {
-    html {
-        font-size: 31.25%;
-        font-size: calc(62.5% * 0.66);
-    }
-
-    #wrapper {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    #contentWrapper {
-        top: -100vh;
-        left: 0vw;
-        width: 100vw;
-        height: 300vh;
-    }
-
-    #mainWrapper {
-        top: 0;
-        left: 0;
-        display: flex;
-        flex-wrap: wrap;
-        width: 100vw;
-        height: 300vh;
-    }
-
-    .moveBtn {
-        position: fixed;
-        display: inline-block;
-        text-align: center;
-        margin: 0 auto;
-        padding: 1.0rem;
-        width: 8.0rem;
-        height: auto;
-        font-size: 3.2rem;
-    }
-
-    .moveBefore {
-        top: 0.0rem;
-        right: 0;
-        left: 0;
-    }
-
-    .moveAfter {
-        bottom: 0.0rem;
-        top: auto;
-        right: 0;
-        left: 0;
-    }
-
-    .moveBefore::before {
-        display: block;
-        margin-right: 0rem;
-        content: "\f106";
-    }
-
-    .moveAfter::after {
-        display: block;
-        width: 100%;
-        margin-left: 0rem;
-        content: "\f107";
-    }
-
-
-    /* ヘッダー部分----------------------------------------------------- */
-
-    #mainHeader {
-        position: inherit;
-        top: 0;
-        left: 0;
-        width: 0;
-        height: 0;
-    }
-
-    #headerAboutBar,
-    #headerGalleryBar {
-        z-index: 1000;
-        display: flex;
-        position: fixed;
-        top: 0;
-        justify-content: center;
-        align-items: center;
-        background-color: #0E0639;
-        color: #fff;
-        padding: 0 10px;
-        width: auto;
-        height: 40px;
-    }
-
-    #headerAboutBar {
-        left: 0;
-    }
-
-    #headerGalleryBar {
-        right: 0;
-    }
-
-    .headerItemWrapper {
-        position: relative;
-    }
-
-    #headerAboutBar span {
-        font-size: 2.1rem;
-        margin: 0 0;
-    }
-
-    #headerGalleryBar .mailBtn {
-        margin: 0 0;
-        margin-right: 5px;
-        width: 5rem;
-        height: 5rem;
-        font-size: 4.2rem;
-        color: #fff;
-    }
-
-    #mainHeader h2 {
-        display: none;
-    }
-
-
-
-    /* 背景色部分----------------------------------------------------- */
-
-    #bgColorWrapper {
-        z-index: 0;
-        position: absolute;
-        display: flex;
-        flex-wrap: wrap;
-        top: 0;
-        left: 0vw;
-        width: 100vw;
-        height: 300vh;
-    }
-
-    #bgColorLeft,
-    #bgColorRight {
-        position: absolute;
-        width: 100vw;
-        text-align: center;
-        line-height: 3rem;
-        font-weight: bold;
-        margin: 0 auto;
-    }
-
-    #bgColorLeft {
-        top: 0;
-        left: 0;
-        bottom: auto;
-        right: auto;
-        background-color: #362D5A;
-        height: calc(150% - 0px);
-    }
-
-    #bgColorRight {
-        bottom: 0;
-        left: 0;
-        top: auto;
-        right: auto;
-        background-color: #A13250;
-        height: calc(50% + 0px);
-    }
-
-
-    /* コンテンツ部分----------------------------------------------------- */
-
-    #mainHome,
-    #mainAbout,
-    #mainGallery {
-        position: relative;
-        overflow-y: hidden;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        width: 100vw;
-        height: 100vh;
-    }
-
-    #mainAbout {
-        display: flex;
-        overflow-x: hidden;
-        overflow-y: scroll;
-        width: 98vw;
-        height: 100vh;
-    }
-
-    #mainHome {
-        color: #fff;
-    }
-
-    #mainGallery {
-        color: #fff;
-    }
-
-    .mainContent {
-        font-size: 5.0rem;
-        margin: 0 2.0rem;
-        width: calc(100% - 2.0rem);
-        transition: 1.0s;
-    }
-
-    #mainAbout .mainContent {
-        width: calc(100vw - 0px);
-        margin: 0;
-        padding: 0;
-        margin-bottom: 0.0rem;
-        margin-top: 8.0rem;
-    }
-
-    #mainHome .mainContent h1 {
-        font-size: 9.0rem;
-    }
-
-    #mainAbout .mainContent .myImg1 {
-        display: none;
-    }
-
-    #mainAbout .mainContent h3 {
-        padding-left: 2.0rem;
-        width: 12.0rem;
-        height: 3.0rem;
-    }
-
-    #mainAbout .mainContent h3 span {
-        bottom: -2.0rem;
-        font-size: 7.2rem;
-    }
-
-    .profileTextBox {
-        margin-left: 0rem;
-    }
-
-    .profileTextBox h4 {
-        position: relative;
-        margin-top: 5.0rem;
-        width: 14.0rem;
-        width: 60%;
-        height: 2.8rem;
-        transform: rotate(-5deg);
-        background-color: #A13250;
-    }
-
-    .profileTextBox h4 span {
-        position: absolute;
-        bottom: 1.0rem;
-        left: 1.0rem;
-        transform: rotate(5deg);
-        font-size: 3.8rem;
-        font-weight: 500;
-    }
-
-    .profileTextBox p {
-        margin-top: 1.0rem;
-        margin-left: 0.0rem;
-        font-size: 2.4rem;
-        line-height: 3.2rem;
-    }
-
-    .profileTextBox .myImg2 {
-        display: block;
-        margin: 2.8rem auto;
-        width: 20.0rem;
-        height: 20.0rem;
-    }
-
-    .mainContentTop {
-        margin-top: 5.0rem;
-    }
-
-    .profileBox {
-        width: 100%;
-    }
-
-    .profileContent {
-        max-width: calc(100% - 20px);
-        width: 100%;
-    }
-
-    .skillContentItem {
-        width: 100%;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
-
-    .skillContentItem img {
-        height: 6.0rem;
-    }
-
-    .skillContentItem table {
-        max-width: 240px;
-    }
-
-    .skillContentItem thead th {
-        text-align: left;
-    }
-
-    .skillContentItem td {
-        max-width: 80px;
-    }
-
-    .carrerContent {
-        font-weight: 300;
-        padding-top: 5rem;
-        padding-bottom: 8.2rem;
-    }
-    
-    .carrerContent li {
-        display: block;
-        margin-bottom: 1.4rem;
-        font-size: 2.1rem;
-        line-height: 2.1rem;
-    }
-    
-
-    .carrerContent span {
-        display: block;
-        margin-right: 10px;
-    }
-
-    .carrerContent li p {
-        display: block;
-    }
-
-
-    #mainGallery .mainContent {
-        position: relative;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        align-items: flex-start;
-        align-content: flex-start;
-        margin-top: 10.0rem;
-        width: 100%;
-    }
-
-    .gItem {
-        padding: 0.5rem;
-        border: #fff solid 1px;
-        width: 130px;
-        height: 130px;
-        margin-bottom: 3.0rem;
-    }
-
-    .gItemEmpty {
-        height: 0px;
-        border: rgba(255, 255, 255, 0.0) solid 1px;
-        padding: 0 0.5rem;
-        margin-bottom: 0.0rem;
-    }
-
-    #gItemPop {
-        width: calc(100% - 4.0rem);
-        height: calc(100% - 14.0rem);
-        padding: 0 1.0rem;
-        margin-bottom: 1.0rem;
-    }
-
-    .gPopCloseBtn {
-        cursor: pointer;
-    }
-
-    .gPopExit {
-        top: 1.0rem;
-        right: 1.0rem;
-        width: 3.0rem;
-        height: 3.0rem;
-        font-size: 5.6rem;
-        font-weight: 100;
-    }
-
-    #gItemPop h4,
-    #gItemPop li span {
-        border-left: #A13250 solid 2px;
-        padding-left: 1.0rem;
-    }
-
-    #gItemPop h4 {
-        margin-top: 6.0rem;
-        margin-bottom: 4.0rem;
-        font-size: 2.4rem;
-        padding-bottom: 0.5rem;
-    }
-
-    #gItemPop h4 span.gItemGenre {
-        display: block;
-        font-size: 1.4rem;
-        border-left: 0;
-        padding-bottom: 0.5rem;
-    }
-
-    #gItemPop li {
-        padding-top: 0.5rem;
-        font-size: 1.8rem;
-        line-height: 2.1rem;
-        margin-bottom: 2.0rem;
-        width: 100%;
-    }
-
-    #gItemPop li span {
-        margin-right: 1.0rem;
-        padding: 0.5rem 0;
-        padding-left: 1.0rem;
-        width: calc((1.4rem * 5) + 1.4rem);
-        height: 100%;
-    }
-
-    #gItemPop li p {
-        display: inline-block;
-        width: 100%;
-    }
-
-    #gItemPop img {
-        width: 100%;
-    }
-
-    .gItemMainImg {
-        margin-bottom: 5.0rem;
-    }
-
-    .gImgSub {
-        margin-top: 6.0rem;
-    }
-
-    .gPopSelect {
-        width: 100%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin: 12.0rem 0 4.0rem;
-        font-weight: 700;
-        font-size: 2.1rem;
-    }
-
-    .gPopBefore::before {
-        margin-right: 1.0rem;
-        content: "\f104";
-    }
-
-    .gPopClose::before {
-        margin-left: 1.0rem;
-        font-weight: 900;
-        content: "✖";
-    }
-
-    .gPopNext::after {
-        margin-left: 1.0rem;
-        content: "\f105";
-    }
-
-    .footerInMain {
-        display: none;
-    }
-
-    .footerFixed {
-        z-index: 1000;
-        position: fixed;
-        bottom: 0;
-        right: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: #0E0639;
-        color: #fff;
-        padding: 0 10px;
-        font-size: 2.1em;
-        width: auto;
-        height: 40px;
-    }
+  html {
+    font-size: 31.25%;
+    font-size: calc(62.5% * 0.66);
+  }
+
+  #wrapper {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #contentWrapper {
+    top: -100vh;
+    left: 0vw;
+    width: 100vw;
+    height: 300vh;
+  }
+
+  #mainWrapper {
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 300vh;
+  }
+
+  .moveBtn {
+    position: fixed;
+    display: inline-block;
+    text-align: center;
+    margin: 0 auto;
+    padding: 1rem;
+    height: auto;
+    font-size: 3.2rem;
+  }
+
+  .moveBefore {
+    top: 0rem;
+    right: 0;
+    left: 0;
+  }
+
+  .moveAfter {
+    bottom: 0rem;
+    top: auto;
+    right: 0;
+    left: 0;
+  }
+
+  .moveBefore::before {
+    display: block;
+    margin-right: 0rem;
+    content: "\f106";
+  }
+
+  .moveAfter::after {
+    display: block;
+    width: 100%;
+    margin-left: 0rem;
+    content: "\f107";
+  }
+
+  /* ヘッダー部分----------------------------------------------------- */
+
+  #mainHeader {
+    position: inherit;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+  }
+
+  #headerAboutBar,
+  #headerGalleryBar {
+    z-index: 1000;
+    display: flex;
+    position: fixed;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e0639;
+    color: #fff;
+    padding: 0 10px;
+    width: auto;
+    height: 40px;
+  }
+
+  #headerAboutBar {
+    left: 0;
+  }
+
+  #headerGalleryBar {
+    right: 0;
+  }
+
+  .headerItemWrapper {
+    position: relative;
+  }
+
+  #headerAboutBar span {
+    font-size: 2.1rem;
+    margin: 0 0;
+  }
+
+  #headerGalleryBar .mailBtn {
+    margin: 0 0;
+    margin-right: 5px;
+    width: 5rem;
+    height: 5rem;
+    font-size: 4.2rem;
+    color: #fff;
+  }
+
+  #mainHeader h2 {
+    display: none;
+  }
+
+  /* 背景色部分----------------------------------------------------- */
+
+  #bgColorWrapper {
+    z-index: 0;
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    top: 0;
+    left: 0vw;
+    width: 100vw;
+    height: 300vh;
+  }
+
+  #bgColorLeft,
+  #bgColorRight {
+    position: absolute;
+    width: 100vw;
+    text-align: center;
+    line-height: 3rem;
+    font-weight: bold;
+    margin: 0 auto;
+  }
+
+  #bgColorLeft {
+    top: 0;
+    left: 0;
+    bottom: auto;
+    right: auto;
+    background-color: #362d5a;
+    height: calc(150% - 0px);
+  }
+
+  #bgColorRight {
+    bottom: 0;
+    left: 0;
+    top: auto;
+    right: auto;
+    background-color: #a13250;
+    height: calc(50% + 0px);
+  }
+
+  /* コンテンツ部分----------------------------------------------------- */
+
+  #mainHome,
+  #mainAbout,
+  #mainGallery {
+    position: relative;
+    overflow-y: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+  }
+
+  #mainAbout {
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    width: 98vw;
+    height: 100vh;
+  }
+
+  #mainHome {
+    color: #fff;
+  }
+
+  #mainGallery {
+    color: #fff;
+  }
+
+  .mainContent {
+    font-size: 5rem;
+    margin: 0 2rem;
+    width: calc(100% - 2rem);
+    transition: 1s;
+  }
+
+  #mainAbout .mainContent {
+    width: calc(100vw - 0px);
+    margin: 0;
+    padding: 0;
+    margin-bottom: 0rem;
+    margin-top: 8rem;
+  }
+
+  #mainHome .mainContent h1 {
+    font-size: 9rem;
+  }
+
+  #mainAbout .mainContent .myImg1 {
+    display: none;
+  }
+
+  #mainAbout .mainContent h3 {
+    padding-left: 2rem;
+    width: 12rem;
+    height: 3rem;
+  }
+
+  #mainAbout .mainContent h3 span {
+    bottom: -2rem;
+    font-size: 7.2rem;
+  }
+
+  .profileTextBox {
+    margin-left: 0rem;
+  }
+
+  .profileTextBox h4 {
+    position: relative;
+    margin-top: 5rem;
+    width: 14rem;
+    width: 60%;
+    height: 2.8rem;
+    transform: rotate(-5deg);
+    background-color: #a13250;
+  }
+
+  .profileTextBox h4 span {
+    position: absolute;
+    bottom: 1rem;
+    left: 1rem;
+    transform: rotate(5deg);
+    font-size: 3.8rem;
+    font-weight: 500;
+  }
+
+  .profileTextBox p {
+    margin-top: 1rem;
+    margin-left: 0rem;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
+  .profileTextBox .myImg2 {
+    display: block;
+    margin: 2.8rem auto;
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .mainContentTop {
+    margin-top: 5rem;
+  }
+
+  .profileBox {
+    width: 100%;
+  }
+
+  .profileContent {
+    max-width: calc(100% - 20px);
+    width: 100%;
+  }
+
+  .skillContentItem {
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .skillContentItem img {
+    height: 6rem;
+  }
+
+  .skillContentItem table {
+    max-width: 240px;
+  }
+
+  .skillContentItem thead th {
+    text-align: left;
+  }
+
+  .skillContentItem td {
+    max-width: 80px;
+  }
+
+  .carrerContent {
+    font-weight: 300;
+    padding-top: 5rem;
+    padding-bottom: 8.2rem;
+  }
+
+  .carrerContent li {
+    display: block;
+    margin-bottom: 1.4rem;
+    font-size: 2.1rem;
+    line-height: 2.1rem;
+  }
+
+  .carrerContent span {
+    display: block;
+    margin-right: 10px;
+  }
+
+  .carrerContent li p {
+    display: block;
+  }
+
+  #mainGallery .mainContent {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: flex-start;
+    align-content: flex-start;
+    margin-top: 10rem;
+    width: 100%;
+  }
+
+  .gItem {
+    padding: 0.5rem;
+    border: #fff solid 1px;
+    width: 130px;
+    height: 130px;
+    margin-bottom: 3rem;
+  }
+
+  .gItemEmpty {
+    height: 0px;
+    border: rgba(255, 255, 255, 0) solid 1px;
+    padding: 0 0.5rem;
+    margin-bottom: 0rem;
+  }
+
+  #gItemPop {
+    width: calc(100% - 4rem);
+    height: calc(100% - 14rem);
+    padding: 0 1rem;
+    margin-bottom: 1rem;
+  }
+
+  .gPopCloseBtn {
+    cursor: pointer;
+  }
+
+  .gPopExit {
+    top: 1rem;
+    right: 1rem;
+    width: 3rem;
+    height: 3rem;
+    font-size: 5.6rem;
+    font-weight: 100;
+  }
+
+  #gItemPop h4,
+  #gItemPop li span {
+    border-left: #a13250 solid 2px;
+    padding-left: 1rem;
+  }
+
+  #gItemPop h4 {
+    margin-top: 6rem;
+    margin-bottom: 4rem;
+    font-size: 2.4rem;
+    padding-bottom: 0.5rem;
+  }
+
+  #gItemPop h4 span.gItemGenre {
+    display: block;
+    font-size: 1.4rem;
+    border-left: 0;
+    padding-bottom: 0.5rem;
+  }
+
+  #gItemPop li {
+    padding-top: 0.5rem;
+    font-size: 1.8rem;
+    line-height: 2.1rem;
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  #gItemPop li span {
+    margin-right: 1rem;
+    padding: 0.5rem 0;
+    padding-left: 1rem;
+    width: calc((1.4rem * 5) + 1.4rem);
+    height: 100%;
+  }
+
+  #gItemPop li p {
+    display: inline-block;
+    width: 100%;
+  }
+
+  #gItemPop img {
+    width: 100%;
+  }
+
+  .gItemMainImg {
+    margin-bottom: 5rem;
+  }
+
+  .gImgSub {
+    margin-top: 6rem;
+  }
+
+  .gPopSelect {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 12rem 0 4rem;
+    font-weight: 700;
+    font-size: 2.1rem;
+  }
+
+  .gPopBefore::before {
+    margin-right: 1rem;
+    content: "\f104";
+  }
+
+  .gPopClose::before {
+    margin-left: 1rem;
+    font-weight: 900;
+    content: "✖";
+  }
+
+  .gPopNext::after {
+    margin-left: 1rem;
+    content: "\f105";
+  }
+
+  .footerInMain {
+    display: none;
+  }
+
+  .footerFixed {
+    z-index: 1000;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #0e0639;
+    color: #fff;
+    padding: 0 10px;
+    font-size: 2.1em;
+    width: auto;
+    height: 40px;
+  }
 }

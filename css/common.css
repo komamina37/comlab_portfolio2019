@@ -231,6 +231,11 @@ body {
   height: 100vh;
 }
 
+.-inner {
+  max-width: 920px;
+  margin: 0 auto;
+}
+
 #mainAbout {
   background-color: #362d5a;
   color: rgba(255, 255, 255, 1);
@@ -459,6 +464,7 @@ body {
   cursor: pointer;
   width: calc(25% - (1.6rem * 1));
   margin: 4.8rem 0 0 1.6rem;
+  border: #fbfbfb solid 4px;
   transition: 0.3s;
 }
 
@@ -468,9 +474,9 @@ body {
 
 .gItemEmpty {
   height: 0px;
-  border: rgba(255, 255, 255, 0) solid 1px;
   padding: 0 1rem;
   margin-bottom: 0rem;
+  border: none;
 }
 
 #gItemPop {
