@@ -1,0 +1,606 @@
+html {
+  font-size: 62.5%;
+  height: 100%;
+}
+
+body {
+  background-color: #0e0639;
+  height: 100%;
+}
+
+#wrapper {
+  position: relative;
+  display: flex;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  font-family: "Yu-Gothic";
+  font-weight: 500;
+  width: 100vw;
+  height: 100vh;
+}
+
+#wrapBlack {
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100%;
+  height: 100vh;
+}
+
+.moveBtn {
+  z-index: 10000;
+  position: fixed;
+  top: calc((100% - 10rem) / 2);
+  display: flex;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+  margin: 0 2rem;
+  height: 10rem;
+  font-size: 2.4rem;
+  transition: 1.5s;
+  animation: moveBtnAnim 1s linear 1s alternate infinite;
+}
+
+@keyframes moveBtnAnim {
+  0% {
+    opacity: 1;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0.1;
+  }
+}
+
+@keyframes noneAnim {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
+.moveBefore {
+  left: 2rem;
+}
+
+.moveAfter {
+  right: 2rem;
+}
+
+.moveBefore::before,
+.moveAfter::after,
+.gPopBefore::before,
+.gPopNext::after {
+  cursor: pointer;
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+}
+
+.moveBefore::before {
+  margin-right: 1rem;
+  content: "\f104";
+}
+
+.moveAfter::after {
+  margin-left: 1rem;
+  content: "\f105";
+}
+
+#contentWrapper {
+  position: absolute;
+  position: fixed;
+  display: flex;
+  top: 0;
+  left: -100vw;
+  width: 300vw;
+  height: 100vh;
+  transition: 1s;
+}
+
+/* 背景色部分----------------------------------------------------- */
+
+#bgColorWrapper {
+  z-index: 0;
+  position: absolute;
+  display: flex;
+  top: 0;
+  width: 300vw;
+  height: 100vh;
+}
+
+#bgColorLeft,
+#bgColorRight {
+  position: absolute;
+  width: 150vw;
+  height: 100vh;
+  text-align: center;
+  line-height: 3rem;
+  font-weight: bold;
+  margin: 0 auto;
+}
+
+#bgColorLeft {
+  top: 0;
+  left: 0;
+  background-color: #362d5a;
+}
+
+#bgColorRight {
+  top: 0;
+  right: 0;
+  background-color: #a13250;
+}
+
+#mainWrapper {
+  position: absolute;
+  display: flex;
+  top: 0;
+  left: 0;
+  width: 300vw;
+  height: 100vh;
+}
+
+/* ヘッダー部分----------------------------------------------------- */
+
+#mainHeader {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300vw;
+  height: 7rem;
+}
+
+#headerAboutBar,
+#headerGalleryBar {
+  display: flex;
+  position: absolute;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: #0e0639;
+  color: #fff;
+  width: auto;
+  height: 100%;
+}
+
+#headerAboutBar {
+  left: 0;
+  padding-left: 100vw;
+}
+
+#headerGalleryBar {
+  right: 0;
+  padding-right: calc(100vw + 7rem);
+}
+
+.headerItemWrapper {
+  position: relative;
+}
+
+#headerAboutBar span {
+  font-size: 2.1rem;
+  margin: 0 2rem;
+}
+
+#headerGalleryBar .mailBtn {
+  fill: #fff;
+  margin: 0 2rem;
+  width: 5rem;
+  height: 5rem;
+  font-size: 4.2rem;
+  color: #fff;
+}
+
+#headerAboutBar h2,
+#headerGalleryBar h2 {
+  position: absolute;
+  color: #fff;
+  font-size: 23.2rem;
+}
+
+#headerAboutBar h2 {
+  top: -8.4rem;
+  left: -7rem;
+}
+
+#headerGalleryBar h2 {
+  top: -8.4rem;
+  left: 8.5rem;
+}
+
+/* コンテンツ部分----------------------------------------------------- */
+
+#mainHome,
+#mainAbout,
+#mainGallery {
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+#mainAbout {
+  background-color: #362d5a;
+  color: rgba(255, 255, 255, 1);
+}
+
+#mainHome {
+  color: rgba(255, 255, 255, 1);
+}
+
+#mainGallery {
+  background-color: #a13250;
+  color: rgba(255, 255, 255, 1);
+}
+
+.moveBefore,
+.mainContent,
+.moveAfter {
+  color: rgba(255, 255, 255, 1);
+}
+
+.mainContent {
+  position: relative;
+  font-size: 5rem;
+  max-width: 92rem;
+  width: 100%;
+  transition: 1s;
+}
+
+#mainHome .mainContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#mainHome .mainContent h1 {
+  font-size: 12rem;
+}
+
+#mainAbout .mainContent {
+  margin-bottom: 20rem;
+}
+
+.mainContentTop {
+  margin-top: 20rem;
+}
+
+#mainAbout .mainContent h3 {
+  position: relative;
+  display: block;
+  padding-left: 2rem;
+  width: 50rem;
+  height: 5rem;
+  background-color: #0e0639;
+}
+
+#mainAbout .mainContent h3 span {
+  position: absolute;
+  bottom: -2rem;
+  font-size: 9.2rem;
+}
+
+.profileBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+
+#mainAbout .mainContent .myImg1 {
+  margin-top: 4.8rem;
+  width: 32rem;
+  height: 32rem;
+}
+
+.profileTextBox .myImg2 {
+  display: none;
+}
+
+.profileTextBox {
+  margin-left: 0rem;
+}
+
+.profileTextBox h4 {
+  position: relative;
+  margin-top: 4.8rem;
+  width: 25rem;
+  width: 60%;
+  height: 5rem;
+  height: 4.8rem;
+  transform: rotate(-5deg);
+  background-color: #a13250;
+}
+
+.profileTextBox h4 span {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+  transform: rotate(5deg);
+  font-size: 4rem;
+  font-weight: 500;
+}
+
+.profileTextBox p {
+  margin-top: 3rem;
+  margin-left: 2rem;
+  font-size: 1.6rem;
+  line-height: 2;
+}
+
+.profileContent {
+  padding-top: 10rem;
+  margin: 0 auto;
+  width: 72%;
+}
+
+.skillContent {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.skillContent h4 {
+  position: relative;
+  display: block;
+  width: 12rem;
+  height: 3.6rem;
+  transform: rotate(-5deg);
+  background-color: #a13250;
+}
+
+.skillContent h4 span {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 1rem;
+  transform: rotate(5deg);
+  font-size: 3.6rem;
+  font-weight: 100;
+}
+
+.skillContentBox {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.skillContentItem {
+  display: flex;
+  align-items: center;
+  margin-top: 6rem;
+  width: 50%;
+}
+
+.skillContentItem table {
+  width: 100%;
+}
+
+.skillContentItem img {
+  height: 8rem;
+}
+
+.skillContentItem th {
+  text-align: left;
+  font-size: 2.7rem;
+}
+
+.skillContentItem td {
+  text-align: center;
+  font-size: 2.1rem;
+  /* background-color: #A13250; */
+  width: 9rem;
+  padding: 2rem 0;
+}
+
+.skillContentItem td .checkGreen {
+  color: #11ff00;
+}
+
+.skillContentItem .skillLevel td {
+  padding: 2rem 0 0;
+  font-size: 1.4rem;
+}
+
+.carrerContent {
+  font-weight: 300;
+}
+
+.carrerContent li {
+  display: block;
+  margin-bottom: 2.5rem;
+  font-size: 2.4rem;
+  line-height: 2.4rem;
+}
+
+.carrerContent span {
+  display: inline-block;
+  margin-right: 1em;
+}
+
+.carrerContent li p {
+  display: inline-block;
+}
+
+.mainContentWrapper {
+  position: relative;
+  max-width: 92rem;
+  width: 100%;
+  margin: 0 1rem;
+}
+
+#mainGallery .mainContent {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  max-width: 92rem;
+  width: 100%;
+  margin: 32rem 0rem 0;
+}
+
+.gItem {
+  cursor: pointer;
+  width: calc(25% - (1.6rem * 1));
+  margin: 4.8rem 0 0 1.6rem;
+  transition: 0.3s;
+}
+
+.gItem:hover {
+  opacity: 0.8;
+}
+
+.gItemEmpty {
+  height: 0px;
+  border: rgba(255, 255, 255, 0) solid 1px;
+  padding: 0 1rem;
+  margin-bottom: 0rem;
+}
+
+#gItemPop {
+  z-index: 100;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 112rem;
+  width: calc(100% - 26rem);
+  height: calc(100% - 14rem);
+  overflow-y: scroll;
+  padding: 0 13rem;
+  background-color: #fff;
+  color: #a13250;
+  margin-bottom: 5rem;
+}
+
+.gPopCloseBtn {
+  cursor: pointer;
+}
+
+.gPopExit {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 5rem;
+  height: 5rem;
+  background-color: #0e0639;
+  color: #fff;
+  font-size: 3.6rem;
+  font-weight: 100;
+}
+
+#gItemPop h4,
+#gItemPop li span {
+  border-left: #a13250 solid 4px;
+  padding-left: 1rem;
+}
+
+#gItemPop h4 {
+  margin-top: 12rem;
+  font-size: 2.4rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 5rem;
+}
+
+#gItemPop h4 span.gItemGenre {
+  display: block;
+  font-size: 1.4rem;
+  border-left: 0;
+  padding-bottom: 0.5rem;
+}
+
+#gItemPop li {
+  display: flex;
+  align-items: stretch;
+  list-style: none;
+  padding-top: 0.5rem;
+  font-size: 1.8rem;
+  line-height: 2.1rem;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+#gItemPop li span {
+  display: inline-block;
+  margin-right: 2rem;
+  padding: 0.5rem 0;
+  padding-left: 1rem;
+  width: 12rem;
+  height: 100%;
+}
+
+#gItemPop li p {
+  display: inline-block;
+  padding: 0.5rem 0;
+  width: 100%;
+}
+
+#gItemPop img {
+  width: 100%;
+}
+
+.gItemMainImg {
+  margin-bottom: 5rem;
+}
+
+.gImgSub {
+  margin-top: 12rem;
+}
+
+.gPopSelect {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 12rem 0 4rem;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.gPopBefore::before {
+  margin-right: 1rem;
+  content: "\f104";
+}
+
+.gPopClose::before {
+  margin-left: 1rem;
+  font-weight: 900;
+  content: "✖";
+}
+
+.gPopNext::after {
+  margin-left: 1rem;
+  content: "\f105";
+}
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  background-color: #0e0639;
+  color: #fff;
+  font-size: 1.6rem;
+  margin-top: 5rem;
+  padding: 2.4rem 2rem;
+}
